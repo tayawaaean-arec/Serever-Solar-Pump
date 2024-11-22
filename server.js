@@ -2,7 +2,7 @@ const admin = require('firebase-admin');
 const path = require('path');
 
 // Initialize Firebase Admin SDK
-const serviceAccount = require('../google-services.json'); // Replace with the path to your Firebase service account key
+const serviceAccount = require('./google-services.json'); // Replace with the path to your Firebase service account key
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: 'https://solar-pump-98502-default-rtdb.firebaseio.com/', // Replace with your database URL
