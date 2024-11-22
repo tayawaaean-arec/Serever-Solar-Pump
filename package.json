@@ -1,7 +1,7 @@
 {
   "name": "serever-solar-pump",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "api/index.js",
   "dependencies": {
     "abort-controller": "^3.0.0",
     "agent-base": "^7.1.1",
@@ -108,7 +108,7 @@
     "yocto-queue": "^0.1.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node api/index.js"
   },
   "keywords": [],
   "author": "",
