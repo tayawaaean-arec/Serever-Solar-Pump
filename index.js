@@ -1,3 +1,4 @@
+const http = require('http');
 const admin = require('firebase-admin');
 const path = require('path');
 
@@ -14,13 +15,11 @@ const pumpStatusRef = database.ref('pumpStatus');
 
 let currentDocId = null;
 
-// Helper function to create a new docid
 const createNewDocId = async () => {
   const docRef = pumpStatusRef.push();
   return docRef.key;
 };
 
-// Subscribe to changes in the "pumpData" reference
 dataRef.on('value', async (snapshot) => {
   const data = snapshot.val();
   if (data) {
@@ -40,15 +39,14 @@ dataRef.on('value', async (snapshot) => {
 
       if (newPumpStatus === 'On') {
         if (!currentDocId) {
-          currentDocId = await createNewDocId(); // Create a new `docid` when pump starts
+          currentDocId = await createNewDocId();
         }
 
         const currentTime = new Date();
-        const formattedTime = currentTime.toTimeString().split(' ')[0]; // Extracts "HH:mm:ss"
-        const formattedDate = currentTime.toISOString().split('T')[0]; // Extracts "YYYY-MM-DD"
+        const formattedTime = currentTime.toTimeString().split(' ')[0];
+        const formattedDate = currentTime.toISOString().split('T')[0];
 
-        // Publish data under the current `docid` with separate date and time
-        const entryRef = pumpStatusRef.child(currentDocId).push(); // Generate a unique key for each entry
+        const entryRef = pumpStatusRef.child(currentDocId).push();
         await entryRef.set({
           time: formattedTime,
           date: formattedDate,
@@ -60,10 +58,20 @@ dataRef.on('value', async (snapshot) => {
 
         console.log(`Data recorded under docid: ${currentDocId}`);
       } else if (newPumpStatus === 'Off') {
-        currentDocId = null; // Reset `docid` when the pump stops
+        currentDocId = null;
       }
     }
   }
 }, (error) => {
   console.error('Error listening to data changes:', error);
+});
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Firebase Node.js server is running');
+});
+
+const PORT = process.env.PORT || 3001;
+server.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
