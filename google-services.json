@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "solar-pump-98502",
+  "private_key_id": "0658edb8bf9f529720432831b8a51aafc5a22801",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCXSr/KQ03b0PMn\nHavsClLDj+i3rPpP8QkTzxfl3pf46gzHuJh3KgPRuz9aSr32/VbYQgtKOjSRJv8x\nEMXl7qcvZ70CexTIvTBudCTn+Ct9cZkt/sPxma4h5gFpc3UXmQYy6IGe2XULyKH0\n7JNIVpGQ0cKrjNt9FIJ9koReooRZoGvon66a4ykY1iBvVo5mTNXyd3/Kd4y12k2R\nzA+QI6IYQjrfY2hInhtOZyXpGgh8etoM4srguz/Awd54r51crSSplQSHhR5pjvzZ\nLXsAEWC26R8JyNGM3SpFWxps4PwGncilHnXb9artyznVWU+SFdQjNbngDEnU66PE\nUrc/7dGBAgMBAAECggEAIneOkxNbQQls48vwN3Gwokn+UB4R1rWIhmFHRgC8qaIU\nsEl/PqKtRRI+ICFn/sV/i/wb21jAUhNKzxBNrZD9uKCPIGoO9Z6YUomWQNy6d7Uy\nGxbv5/JFiAaA6te5ZNthXKa4pQpQjpMyRnzBHxlNx2rqSS/pbykFg3smOfMXaN13\n3PBgcXRID8DhCJ62Q9kDSWEM06cQiz26pZX2xdNs8s+J/Ru4B4KmHdQMejyrzGKp\nbu1FlALcUEJG83WweZjWpYVgSml/PhGV4htJKOOYYiqvAfbeV4dw9TN7DEVbNgVb\nxflJFP/HjAMzsXBdIMICiF6kV7iksrbAI3BbncffSwKBgQDT91lJfXDhRxYAPANt\nxQ156QqLipIRSyseHJNWpVBk2xBKWa0t++oIzOHqObhuecmyKmlK9s31cAjrXAeM\nzxJ/MGhJYZK+YjLqlL1SuiZEV+zzzSAazxt1z3xiV65wVr2b4++UrKqDjqSsbSAD\nSbginoeRk7f5blIxcJZuU/dz7wKBgQC2uKm5c3khUTCiNfyaAZQB75Sk0RdvFVxP\nw6v0h4LwdGfgRhrSVItxQXfjYuPRL4wDCUFuijfnk9BKXUuApBPHi4mu720AXpW5\n2aHRA3kM2550Lrrdxq9Xd0+y+Az6lOLyi+RaZPADSo/684JfoUZYEa/Z6sSqU3Tm\n9dOItiHhjwKBgQCvBig48ZaavhrhmKxwIG0vRAmMDaDtHLd+xrO2sQyAKw75hbDl\nLoUiPSMyR/UNbAzqy/BjkQWh65/B0Bz/3SB125/RL/t+rxFB+A2YWNMuTbf/3Fnt\nKSSQlAIuJh6I7mbkaUMz7ZtixA8fvX/Yly+vjl19DI+2K608262rbjP/CwKBgEqT\nO9JQ6tNKS8sotZw1oK7ZlZVfMW1JDpAPkJMQ68Qv/mVut2u4zeC/k6repZSvDzn+\nARKYnxCJJ63yPeqXDOuYa+1WEurfr8RWqtCf1jwFNrq8h9AUU2QjcgfdbY6oTago\nqF6sa7ksKW+HC2L0c71mGpuaUgIiZcgN9PQLQfDJAoGAUOQ/M5kwP3fVRQZW+oBs\ngHaFifZUgOK6zYzRtbLIC7BXffTjwDlNUvLREU64L6WkFombS1ct1pIOOCsfHtme\nHqyhUQL+lD/SncgrNE/kvCca0v8sLkbOooXnL06XujFNVCTRdz7weLiS0uBD5PQp\nH+Be3bDC5OcNswar2UW/QmM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-5hxtz@solar-pump-98502.iam.gserviceaccount.com",
+  "client_id": "105348267161506361059",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-5hxtz%40solar-pump-98502.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
