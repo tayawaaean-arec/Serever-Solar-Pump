@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Expose a port (optional for debugging purposes)
-EXPOSE 3000
+EXPOSE 3002
 
 # Run the application
 CMD ["node", "api/index.js"]
