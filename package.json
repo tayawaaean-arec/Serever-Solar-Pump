@@ -6,6 +6,7 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "express": "^4.21.1",
     "firebase-admin": "^11.8.0"
   }
 }
