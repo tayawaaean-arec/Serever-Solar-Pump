@@ -1,11 +1,16 @@
+const express = require('express');
 const admin = require('firebase-admin');
 const path = require('path');
+require('dotenv').config();
+
+const app = express();
+const port = process.env.PORT || 4000;
 
 // Initialize Firebase Admin SDK
-const serviceAccount = require('../config/google-services.json'); // Ensure this file is in the same directory as this script
+const serviceAccountPath = path.resolve(__dirname, process.env.GOOGLE_SERVICES_JSON || '../config/google-services.json');
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: 'https://solar-pump-98502-default-rtdb.firebaseio.com/', // Replace with your database URL
+  credential: admin.credential.cert(require(serviceAccountPath)),
+  databaseURL: process.env.DATABASE_URL || 'https://solar-pump-98502-default-rtdb.firebaseio.com/',
 });
 
 const database = admin.database();
@@ -70,7 +75,12 @@ dataRef.on(
   }
 );
 
-// Export the handler for Vercel
-module.exports = (req, res) => {
-  res.status(200).send('Firebase Node.js server is running');
-};
+// Root endpoint for health check
+app.get('/', (req, res) => {
+  res.send('Firebase Node.js server with Express is running!');
+});
+
+// Start Express server
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});

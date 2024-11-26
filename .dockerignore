@@ -1,5 +1,4 @@
 node_modules
 .vscode
-.vercel
 npm-debug.log
 google-services.json
