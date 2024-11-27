@@ -13,7 +13,7 @@ const firebaseConfig = {
 };
 
 const app = express();
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 5000;
 
 // Initialize Firebase Admin SDK
 const serviceAccount = require(process.env.GOOGLE_SERVICES_JSON);
