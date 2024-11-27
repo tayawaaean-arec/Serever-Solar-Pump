@@ -16,7 +16,13 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // Initialize Firebase Admin SDK
-const serviceAccount = require(process.env.GOOGLE_SERVICES_JSON);
+const serviceAccountPath = process.env.GOOGLE_SERVICES_JSON;
+if (!serviceAccountPath) {
+  console.error('Error: GOOGLE_SERVICES_JSON environment variable is not set.');
+  process.exit(1);
+}
+
+const serviceAccount = require(serviceAccountPath);
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
